@@ -1,0 +1,28 @@
+[package]
+name = "fractal-analysis"
+version = "0.0.10"
+authors = ["froderick <velona@ahiru.eu>"]
+edition = "2018"
+description = "A crate that performs various types of fractal analysis based (currently) on the Z-order Box Merging algorithm."
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/DoubleHyphen/fractal-analysis"
+documentation = "https://docs.rs/fractal-analysis/0.0.10/fractal_analysis/"
+repository = "https://github.com/DoubleHyphen/fractal-analysis"
+
+[dependencies]
+morton-encoding = "1.0.1"
+num = "0.2"
+rayon = "1.3.0"
+num-traits = "0.2.11"
+image = "0.18.0"
+itertools = "0.8.2"
+arrayvec = "0.5.1"
+
+[dev-dependencies]
+rand = "0.7.3"
+noise = "0.6.0"
+
+[features]
+default = ["time_things", "parallel"]
+time_things = []
+parallel = []
